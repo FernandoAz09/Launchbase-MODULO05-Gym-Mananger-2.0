@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="/styles.css">
+    <head>
+        
+        {% block head %}
+
+            <title>Gym Manager</title>
+            
+        {% endblock %}
+
+    </head>
+    <body>
+        <header>
+            <div class="links">
+                <a href="/instructors">Instructors</a>
+                <a href="/members">Members</a>
+            </div>
+        </header> 
+        
+        {% block content %}     <!-- ABRE O BLOCO COM NUNJUCKS -->
+                                <!-- TUDO O QUE FOR CHAMADO COM O BLOCK CONTENT SERÁ SUBSTITUIDO DE FORMA DINAMICA COM NUNJUCKS -->
+        {% endblock %}          <!-- FECHA O BLOCO COM NUNJUCKS -->
+
+        <script src="/scripts.js"></script>
+    </body>
+</html>

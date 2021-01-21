@@ -1,0 +1,52 @@
+{% extends "layout.njk" %}    {# extendendo a formatação e estilização do layout para index #}
+
+{% block content %}
+
+<div class="card">
+    <section 
+    
+    class="avatar" 
+    style="background: url({{ instructor.avatar_url}}) no-repeat  center / cover">
+    {# estilizando a bkgd img [no-repeat(não repetindo) center/cover (centralizada e cobrindo todo o box)] #}
+    {# Consumindo a API do unsplash para mudar as fotos da página #}
+    </section>
+    
+    <section class="details">
+
+        <h3>Detalhes</h3>
+
+        <div class="item">
+            <div>Instrutor</div>
+            <div>{{ instructor.name }}</div>
+        </div>
+        
+        <div class="item">
+            <div>Idade</div>
+            <div>{{ instructor.age }}</div>
+        </div>
+
+        <div class="item">
+            <div>Sexo</div>
+            <div>{{ "Masculino" if instructor.gender == "M" else "Feminino" }}</div>
+        </div>
+
+        <div class="item">
+            <div>Acompanhamento</div>
+            <div>
+                {% for service in instructor.services %}
+                    <span>{{ service }}</span>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Desde</div>
+            <div>{{ instructor.created_at }}</div>
+        </div>
+
+        <a href="/instructors/{{ instructor.id }}/edit " class="button">Editar</a>  {# BOTÃO PARA EDIÇÃO DO FORMULÁRIO #}
+
+    </section>
+</div>
+
+{% endblock content %}

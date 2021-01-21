@@ -1,0 +1,40 @@
+{% extends "layout.njk" %}    {# extendendo a formatação e estilização do layout para index #}
+
+{% block content %}
+
+<div class="card">
+    <section 
+        
+        class="avatar" 
+        style="background: url({{ instructor.avatar_url}}) no-repeat  center / cover">
+        {# estilizando a bkgd img [no-repeat(não repetindo) center/cover (centralizada e cobrindo todo o box)] #}
+        {# Consumindo a API do unsplash para mudar as fotos da página #}
+    </section>
+
+                           {# HTML só aceita os verbos GET e POST #}
+        
+        
+    <section class="details">
+        <form method="POST" action="/instructors?_method=PUT"> {# SOBREESCREVENDO O MÉTODO e TROCANDO O VERBO DE POST PARA PUT#}
+
+            <h3>Editar Instrutor</h3>
+
+        {% include "instructors/fields.njk" %} {#  Inclui arquivo externo dinâmicamente  #}
+
+            <input 
+                type="hidden" 
+                name="id" 
+                value="{{ instructor.id }}"> {# INPUT escondido para que o servidor encontre o ID #}
+
+        </form>
+        <form id="form-delete" method="post" action="/instructors?_method=DELETE">
+            <input
+            type="hidden" 
+            name="id" 
+            value= "{{ instructor.id}}">
+            <button type="submit">Deletar</button>
+        </form>
+    </section>
+</div>
+
+{% endblock content %}

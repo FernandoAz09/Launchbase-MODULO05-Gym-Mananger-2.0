@@ -1,0 +1,31 @@
+{% extends "layout.njk" %}    {# extendendo a formatação e estilização do layout para index #}
+
+{% block content %}
+
+<div class="card table-container">
+    <a href="/instructors/create">Novo</a>
+    <table width="100%">
+        <thead>
+            <tr>
+                <th>Instrutor</th>
+                <th>Atendimento</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+{# TRAZENDO DINÂMICAMENTE OS DADOS PARA PREENCHER A TABELA #}
+            {% for instructor in instructors %} 
+                <tr>
+                    <td>
+                        <span style="background-image: url({{instructor.avatar_url}})"></span>
+                        {{ instructor.name }}
+                    </td>
+                    <td>{{ instructor.services }}</td>
+                    <td><a href="/instructors/{{instructor.id}}">VER</a></td> {# Botão que leva direto para o card do Instrutor #}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock content %}
