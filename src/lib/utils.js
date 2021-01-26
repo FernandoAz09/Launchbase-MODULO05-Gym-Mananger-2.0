@@ -1,8 +1,8 @@
-//TIMESTAMP: 
+/////////////////TIMESTAMP: 
 /*  é um número que determina um momento específico.
 Tipicamente é expresso como o "número de segundos desde 1/1/1970 00:00 em Londres",
 mas poderia ser qualquer outra base.
-A ideia do timestamp é que ele vale no mundo todo,
+A ideia do timestamp é que ele vale no mundo todo, 
 ou seja, ele identifica o momento exato em que algo aconteceu. 
 */
 
