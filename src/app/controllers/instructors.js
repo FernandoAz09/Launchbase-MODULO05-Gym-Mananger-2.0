@@ -31,22 +31,29 @@ module.exports = {
         })
         
     },
-    show(req, res) {
-        Instructor.find(req.params.id, function(instructor) {
-           if (!instructor) return res.send("Instructor not found!")
+    show (req, res)  {
+        Instructor.find(req.params.id, (instructor) => {
+            if(!instructor) return res.send("instructor not found")
 
-           instructor.age = age(instructor.birth)
-           instructor.services = instructor.services.split(", ")
+            instructor.age = age(instructor.birth)
+            instructor.services = instructor.services.split(",")
+            instructor.created_at = date(instructor.created_at).format
 
-           instructor.created_at = date(instructor.created_at).format
+            return res.render("instructors/show", {instructor})
 
-           return res.render("/instructors/show", { instructor })
         })
-
-        
     },
     edit(req, res) {
-        return
+        Instructor.find(req.params.id, (instructor) => {
+            if(!instructor) return res.send("instructor not found")
+
+            instructor.birth = date(instructor.birth).iso
+            instructor.services = instructor.services.split(",")
+            instructor.created_at = date(instructor.created_at).format
+
+            return res.render("instructors/show", {Instructor})
+
+        })
     },
     put(req, res) {
         const keys = Object.keys(req.body)
