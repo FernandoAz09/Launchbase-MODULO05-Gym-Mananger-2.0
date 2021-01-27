@@ -12,10 +12,10 @@ for (item of menuItems) {
 // Validação de DELETE
 
 const formDelete = document.querySelector("#form-delete")
-formDelete.addEventListener("submit", function(event) {
+formDelete.addEventListener("submit", (event) => {
     const confirmation = confirm("Deseja Deletar?")
-    if(!confirmation) {
-        event.preventDefault()
+    if(!confirmation) { //se clicar no cancelar
+        event.preventDefault() // ele previne o delete
     }
 })
 
