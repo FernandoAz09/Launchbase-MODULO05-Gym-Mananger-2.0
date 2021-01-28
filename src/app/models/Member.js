@@ -1,6 +1,5 @@
 const db = require('../config/db')
 const { date } = require('../../lib/utils') // Objeto desestruturado e exportado 
-const instructors = require('../controllers/instructors')
 
 
 module.exports = {
