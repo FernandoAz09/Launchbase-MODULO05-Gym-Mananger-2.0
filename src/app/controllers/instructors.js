@@ -1,8 +1,7 @@
-const Intl = require('intl') // Instalado para formatar a data conforme a região
 const { age, date } = require('../../lib/utils') // Objeto desestruturado e exportado 
+const Intl = require('intl') // Instalado para formatar a data conforme a região
 
 const Instructor = require('../models/Instructor')
-
 
 
 module.exports = {
@@ -21,7 +20,7 @@ module.exports = {
 
         for (key of keys) {
             if (req.body[key] == "") {
-                return res.send('Por favor, preencha todos os campos.')
+                return res.send("Por favor, preencha todos os campos.")
             }
         }
 
@@ -47,7 +46,7 @@ module.exports = {
         Instructor.find(req.params.id, (instructor) => {
             if(!instructor) return res.send("instructor not found")
 
-            instructor.birth= date(instructor.birth).iso
+            instructor.birth = date(instructor.birth).iso
             
 
             return res.render("instructors/edit", {instructor})
@@ -58,17 +57,11 @@ module.exports = {
         const keys = Object.keys(req.body);
     
         for (key of keys) {
-            if (req.body[key] == "") return res.send("Please, fill all fields");
+            if (req.body[key] == "") {
+                return res.send("Por favor, preencha todos os campos.")
+            }
         }
     
-        let {
-            avatar_url,
-            birth,
-            name,
-            services,
-            gender
-        } = req.body;
-            
         Instructor.update(req.body, () => {
             return res.redirect(`/instructors/${req.body.id}`)
         })

@@ -5,8 +5,14 @@ const { date } = require('../../lib/utils') // Objeto desestruturado e exportado
 module.exports = {
     all(callback) { // Função dentro de uma função
 
-        db.query(`SELECT * FROM instructors`, function(err, results) {
-            if(err) throw `Database Error! ${err}`
+        db.query(`
+        SELECT instructors.*, count(members) AS total_students
+        FROM instructors
+        LEFT JOIN members ON (members.instructor_id = instructors.id)
+        GROUP BY instructors.id
+        ORDER BY instructors.id ASC`, 
+            (err, results) => {
+                if(err) throw `Database Error! ${err}`
 
             callback(results.rows) // Essa função será chamada, mas só após da leitura do banco de dados acima
         })
