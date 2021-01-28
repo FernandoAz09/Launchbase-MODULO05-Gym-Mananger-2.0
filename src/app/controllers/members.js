@@ -15,7 +15,7 @@ module.exports = {
     create(req, res) {
 
     
-        Member.instructorsSelectOptions((options) => {
+        Member.instructorsSelectOptions((options) => { // Criando caixa de seleção de Instrutores
             return res.render("members/create", { instructorOptions: options })
 
         })
@@ -52,7 +52,7 @@ module.exports = {
 
             member.birth = date(member.birth).iso
 
-            Member.instructorsSelectOptions((options) => {
+            Member.instructorsSelectOptions((options) => {  // Podendo editar o instrutor por aqui tbm
                 return res.render("members/create", { member, instructorOptions: options })
     
             })
