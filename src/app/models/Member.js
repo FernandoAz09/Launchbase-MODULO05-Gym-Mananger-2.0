@@ -49,7 +49,7 @@ module.exports = {
 
 
     },
-    find(id, callback) {
+    find(id, callback) { // Trazendo o id do instrutor para mostrar o nome dele 
         db.query(`
             SELECT members.*, instructor.name AS instructor_name 
             FROM members 
