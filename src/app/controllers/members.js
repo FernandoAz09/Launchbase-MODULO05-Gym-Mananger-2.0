@@ -53,7 +53,7 @@ module.exports = {
             member.birth = date(member.birth).iso
 
             Member.instructorsSelectOptions((options) => {  // Podendo editar o instrutor por aqui tbm
-                return res.render("members/create", { member, instructorOptions: options })
+                return res.render("members/edit", { member, instructorOptions: options })
     
             })
   

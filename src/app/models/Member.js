@@ -48,9 +48,9 @@ module.exports = {
 
 
     },
-    find(id, callback) { // Trazendo o id do instrutor para mostrar o nome dele 
+    find(id, callback) {  
         db.query(`
-            SELECT members.*, instructor.name AS instructor_name 
+            SELECT members.*, instructors.name AS instructor_name 
             FROM members 
             LEFT JOIN instructors ON (members.instructor_id = instructors.id)
             WHERE members.id = $1`, [id], (err, results) => {
