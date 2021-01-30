@@ -10,7 +10,8 @@ module.exports = {
 
         page = page || 1
         limit = limit || 2
-        let offset = limit * (page -1)
+        // logica para limitar 2 resultados por pagina
+        let offset = limit * (page - 1)
 
         const params = {
             filter,
@@ -18,7 +19,13 @@ module.exports = {
             limit,
             offset,
             callback(instructors) {
-                return res.render("instructors/index", { instructors, filter })
+
+                const pagination = {
+                    filter,
+                    total: Math.ceil(instructors[0].total / limit),
+                    page
+                }
+                return res.render("instructors/index", {instructors, pagination, filter})
             }
         }
         
