@@ -31,19 +31,19 @@ module.exports = {
         
         Instructor.paginate(params) 
 
+/*
+const { filter } = req.query
 
-        // const { filter } = req.query
-
-        // if (filter) {
-        //     Instructor.findBy(filter, (instructors) => {
-        //         return res.render("instructors/index", { instructors, filter })
-        //     })
-        // } else {
-        //     Instructor.all((instructors) =>{
-        //         return res.render("instructors/index", { instructors })
-        //     })
-        // }
-
+if (filter) {
+    Instructor.findBy(filter, (instructors) => {
+        return res.render("instructors/index", { instructors, filter })
+    })
+} else {
+    Instructor.all((instructors) =>{
+        return res.render("instructors/index", { instructors })
+    })
+}
+*/
 
 
     },
