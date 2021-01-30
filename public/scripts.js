@@ -1,7 +1,9 @@
+const currentPage = location.pathname //Pegando página atual
+const menuItems = document.querySelectorAll("header .links a")//active HTML
+const pagination = document.querySelector(".pagination") //paginação
 
 
-const currentPage = location.pathname
-const menuItems = document.querySelectorAll("header .links a")
+// Passando o active para dentro do HTML
 
 for (item of menuItems) {
     if (currentPage.includes(item.getAttribute("href")) ) {
@@ -14,6 +16,8 @@ for (item of menuItems) {
 function paginate (selectedPage, totalPages) {
     let pages = [],
         oldPage
+
+
 
     for (let currentPage = 1; currentPage <= totalPages; currentPage++) {
         const firstAndLastPage = currentPage == 1 || currentPage == totalPages
@@ -62,7 +66,6 @@ function createPagination(pagination) {
     pagination.innerHTML = elements
 }
 
-const pagination = document.querySelector(".pagination")
 
 if (pagination) {
     createPagination(pagination)
