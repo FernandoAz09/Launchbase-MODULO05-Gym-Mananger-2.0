@@ -125,6 +125,7 @@ Além disto um editor de codígo fonte, eu recomendo o uso do  [VSCode](https://
 ## Autor<a name="autor"></a>
 
 :triangular_flag_on_post: By [Fernando Azevedo](https://github.com/FernandoAz09)
+💪💪 README TOP baseado no Readme do [WelissonLuca](https://github.com/WelissonLuca) dê uma passada lá pra ver!!(E muito obrigado pelo help Welisson!!🖖🖖👨‍💻👨‍💻)
 
 
 
