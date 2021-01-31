@@ -1,56 +1,139 @@
-# WORK IN PROGRESS......
+ <p align="center"> <img src="https://camo.githubusercontent.com/047366567218e6f144fb666cf9d0d1c2f34dc5a6e6af816aeead27d9f1e8350f/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f676f6c64656e2d77696e642f626f6f7463616d702d6c61756e6368626173652f6c6f676f2e706e67"></p>
 
-<!-- <h1 align="center">
-  <img src ="https://camo.githubusercontent.com/268b1344409fac98c4eeda520482b6910c4ddcba/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f676f6c64656e2d77696e642f626f6f7463616d702d6c61756e6368626173652f6c6f676f2e706e67" />
-  <h2 align="center"> Controle de academia </h2>
-<h1>
+  <h1 align="center">  Controle de academia  </h1>
 
-# Índice
+  <p align="center">Projeto desenvolvido durante o bootcamp <a href"https://rocketseat.com.br/">LaunchBase</a> Da <a href"https://rocketseat.com.br/"> Rocketseat</a> . </p>
 
-- [Sobre](#sobre)
-- [Desenvolvimento](#desenvolvimento)
-- [Imagens](#imagens)
-- [Bibliotecas](#bibliotecas)
-        
-    
----
 
-## Sobre<a name="sobre"></a>
-
-Atividade desenvolvida durante o Bootcamp Launchbase da Rocketseat. Se trata de um Controle de Academia, onde temos instrutores e membros que podem ser cadastrados, visualizados e também podem ter seus dados alterados.
-
----
-
-## Desenvolvimento<a name="desenvolvimento"></a>
-
-#### Em desenvolvimento....
----
-
-## Imagens<a name="imagens"></a>
-
-As imagens utilizadas neste projeto foram obtidas a partir das seguintes fontes:
-
-- [Unsplash](https://unsplash.com/)
-- [API da Unsplash](https://source.unsplash.com/)
-- [Collection da Unsplash](https://unsplash.com/collections/19035194/gym)
-
----
-
-## Bibliotecas<a name="bibliotecas"></a> 
-
-O projeto foi desenvolvido utilizando as seguintes linguagens e bibliotecas:
-  - JavaScript
-  - Express
-  - Nodemon
-  - Nunjucks
-  - Intl (para correção de formato de data)
-  - Utilizado BrowserSync e o npm-run-all (para facilitar o desenvolvimento e não precisar ficar restartando a todo o momento o servidor)
-  - Method Override (para sobreescrever o VERBO/método do HTML)
   
----
 
-Curso: LaunchBase da [Rocketseat](https://rocketseat.com.br/)
+<hr>
 
----
+## Indice
 
-:triangular_flag_on_post: By [Fernando Azevedo](https://github.com/FernandoAz09) -->
+
+* [Sobre](#sobre)
+* [Funcionalidades Implementadas](#funcio)
+* [Tecnologias:](#tecnologias)
+* [Dependencias](#dependencias)
+* [Como executar o projeto](#comoexec)
+* [Como contribuir com o projeto](#comocontribuir)
+* [Rodando a aplicação](#runapp)
+* [Autor](#autor)
+
+
+
+## Sobre o Controle de Academia<a name="sobre"></a>
+
+<p align="left"> O Controle de Academia é uma aplicação web de gerenciamento de academia, responsável pelo controle de instrutores e membros.  </p>
+
+<hr>
+
+## Funcionalidades Implementadas<a name="funcio"></a>
+
+- ✔️ Criar, visualizar, editar e apagar instrutores e membros.
+
+- ✔️ Filtrar instrutores e membros
+
+- ✔️ Paginação
+
+- ✔️ Sistema totalmente dinâmico com nunjucks
+
+- ✔️ Banco de dados PostegreSQL 
+
+<hr>
+
+## Tecnologias<a name="tecnologias"></a>
+- <a href="https://www.w3schools.com/html/">HTML</a>
+- <a href="https://www.w3schools.com/css/default.asp">CSS</a>
+- <a href="https://www.w3schools.com/js/default.asp">JavaScript</a>
+- <a href="https://nodejs.org/en/">Node</a>
+- <a href="https://www.npmjs.com/">NPM</a>
+- <a href="https://www.postgresql.org/">PostegreSQL</a>
+
+<hr>
+
+ ## Dependencias<a name="dependencias"></a>
+- <a href="https://www.npmjs.com/package/express">Express</a>
+- <a href="https://www.npmjs.com/package/nunjucks">Nunjucks</a>
+- <a href="https://www.npmjs.com/package/nodemon">Nodemon</a>
+- <a href="https://www.npmjs.com/package/browser-sync">Browser-Sync</a>
+- <a href="https://www.npmjs.com/package/npm-run-all">Npm-run-all</a>
+- <a href="https://www.npmjs.com/package/MethodOverride">MethodOverride</a>
+
+
+<hr />
+
+## Como executar o projeto<a name="comoexec"></a>
+Antes de tudo você vai precisar instalar na sua maquina, os seguintes arquivos:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [PostegreSQL](https://nodejs.org/en/). 
+Além disto um editor de codígo fonte, eu recomendo o uso do  [VSCode](https://code.visualstudio.com/)
+
+#### Rodando a aplicação<a name="runapp"></a>
+
+1. Clone este repositório
+
+	```bash
+	git clone https://github.com/FernandoAz09/Launchbase-MODULO05
+	```
+
+2. Acesse a pasta do projeto no seu *vscode*
+
+	```bash
+	cd Launchbase-MODULO05
+	```
+
+3. Instale as dependências
+
+	```bash
+	npm i
+	```
+
+4. Crie e importe o banco de dados
+	```bash
+	psql -U postgres -c "CREATE DATABASE gymmanager"
+	psql -U postgres -d gymmanager <gymmanager.sql
+
+	Você também pode criar e importar manualmente o banco de dados usando o Postbird ou pgAdmin.
+
+	Conexão com o banco de dados: edite o arquivo db.js dentro da pasta src/config com o seu USERNAME e PASSWORD (Postgres).	
+
+	```	
+	
+
+
+
+5. Execute a aplicação 
+
+	```bash
+	npm start
+	```
+
+
+
+<p align="center">A aplicação será aberta na porta:3000 - acesse http://localhost:3000</p>
+<hr>
+
+
+## Como contribuir para o projeto<a name="comocontribuir"></a>
+
+1. Faça um **fork** do projeto.
+2. Crie uma nova branch com as suas alterações: `git checkout -b my-feature`
+3. Salve as alterações e crie uma mensagem de commit contando o que você fez: `git commit -m "feature: My new feature"`
+4. Envie as suas alterações: `git push origin my-feature`
+
+## Autor<a name="autor"></a>
+
+:triangular_flag_on_post: By [Fernando Azevedo](https://github.com/FernandoAz09)
+💪💪 README TOP baseado no Readme do [WelissonLuca](https://github.com/WelissonLuca) dê uma passada lá pra ver!!(E muito obrigado pelo help Welisson!!🖖🖖👨‍💻👨‍💻)
+
+
+
+
+
+
+
+
+
+
+
