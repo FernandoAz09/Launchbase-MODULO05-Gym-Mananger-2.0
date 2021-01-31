@@ -58,6 +58,8 @@ module.exports = {
         
     },
     show (req, res)  {
+
+        
         Member.find(req.params.id, (member) => {
             if(!member) return res.send("member not found")
 
@@ -65,7 +67,11 @@ module.exports = {
 
             return res.render("members/show", {member})
 
+
+            
         })
+
+
     },
     edit (req, res)  {
         Member.find(req.params.id, (member) => {
