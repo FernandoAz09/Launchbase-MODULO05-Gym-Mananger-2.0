@@ -127,7 +127,7 @@ module.exports = {
         }
 
         query = `SELECT members.*, ${totalQuery}
-        FROM member
+        FROM members
         ${filterQuery}
         LIMIT $1 OFFSET $2
         `
