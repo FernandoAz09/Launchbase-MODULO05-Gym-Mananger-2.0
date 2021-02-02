@@ -2,7 +2,7 @@
 
   <h1 align="center">  Controle de academia  </h1>
 
-  <p align="center">Projeto desenvolvido durante o bootcamp <a href"https://rocketseat.com.br/">LaunchBase</a> Da <a href"https://rocketseat.com.br/"> Rocketseat</a> . </p>
+  <p align="center">Projeto desenvolvido durante o bootcamp LaunchBase da [Rocketseat](https://www.rocketseat.com.br). </p>
 
 
   
@@ -21,7 +21,7 @@
 * [Rodando a aplicação](#runapp)
 * [Autor](#autor)
 
-
+<hr>
 
 ## Sobre o Controle de Academia<a name="sobre"></a>
 
@@ -31,7 +31,7 @@
 
 ## Funcionalidades Implementadas<a name="funcio"></a>
 
-- ✔️ Criar, visualizar, editar e apagar instrutores e membros.
+- ✔️ Criar, visualizar, editar e excluir instrutores e membros.
 
 - ✔️ Filtrar instrutores e membros
 
@@ -121,6 +121,8 @@ Além disto um editor de codígo fonte, eu recomendo o uso do  [VSCode](https://
 2. Crie uma nova branch com as suas alterações: `git checkout -b my-feature`
 3. Salve as alterações e crie uma mensagem de commit contando o que você fez: `git commit -m "feature: My new feature"`
 4. Envie as suas alterações: `git push origin my-feature`
+
+<hr>
 
 ## Autor<a name="autor"></a>
 
