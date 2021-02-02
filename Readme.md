@@ -2,7 +2,7 @@
 
   <h1 align="center">  Controle de academia  </h1>
 
-  <p align="center">Projeto desenvolvido durante o bootcamp LaunchBase da [Rocketseat](https://www.rocketseat.com.br). </p>
+  <p align="center">Projeto desenvolvido durante o bootcamp LaunchBase da <a href="https://www.rocketseat.com.br">Rocketseat</a>. </p>
 
 
   
