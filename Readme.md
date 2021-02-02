@@ -2,7 +2,7 @@
 
   <h1 align="center">  Controle de academia  </h1>
 
-  <p align="center">Projeto desenvolvido durante o bootcamp LaunchBase da <a href="https://www.rocketseat.com.br">Rocketseat</a>. </p>
+  <p align="center">Projeto desenvolvido durante o bootcamp LaunchBase da <a href="https://www.rocketseat.com.br" target="_blank">Rocketseat</a>. </p>
 
 
   
@@ -92,7 +92,7 @@ Além disto um editor de codígo fonte, eu recomendo o uso do  [VSCode](https://
 4. Crie e importe o banco de dados
 	```bash
 	psql -U postgres -c "CREATE DATABASE gymmanager"
-	psql -U postgres -d gymmanager <gymmanager.sql
+	psql -U postgres -d gymmanager gymmanager.sql
 
 	Você também pode criar e importar manualmente o banco de dados usando o Postbird ou pgAdmin.
 
